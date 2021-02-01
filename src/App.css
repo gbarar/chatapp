@@ -1,31 +1,139 @@
+
+
+
 .App {
   text-align: center;
   background: #362023;  
-  height: 100vh;
+  height: 100vh;  
   width: 100vw;
   display:flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .header{
   background-color: #f0b8ce;
-  border-bottom:1px solid white;
-  height: 7rem;
+  /* border-bottom:1px solid white; */
+  height: 4rem;
   display:flex;
   align-items: center;
   padding: 0 12px;
-  font-size:3rem;
+  margin-bottom:15px;
+  font-size:2rem;
   color:rgb(53, 39, 39);
-  font-weight: bold;  
+  font-family:"Andale Mono";
+  /* font-weight: bold;   */
 }
 
 .logo{
-  height: 5rem;
-  width: 5rem;
+  height: 3rem;
+  width: 3rem;
   margin-right:35px;
   background: url("/Users/gracebarar/Documents/Winter Quarter 2021/HCDE 438/chatapp/src/Stay+at+Home+collage.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size:cover;
 }
+.messages{
+  display: flex;
+  flex-direction: column-reverse;
+  flex: 1;
+  /* justify-content: flex-end; */
+  overflow: auto;
+  font-family:"Andale Mono";
+}
+.message-row{
+  width:70%;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.message{
+  background:#f0b8ce;
+  color: #362023;
+  border-radius:10px;
+  margin:4px;
+  display: inline-block;
+  word-wrap: break-word; 
+  overflow: hidden;
+  font-family:"Andale Mono";
+  padding: 4px 12px;
+  text-align: justify ;
 
+}
+
+.form {
+  /* max-width: 1200px;
+  min-width: 400px; */
+  padding: 25px;
+  background-color: none;
+  /* margin: 40px 0; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color:#bd527f;
+  font-family:"Andale Mono";
+  margin-top:15px;
+} 
+.formbutton {
+  background-color: #f0b8ce;
+  border: 1px solid #f0b8ce;
+  line-height: 0;
+  font-size: 17px;
+  padding: 20px 15px;
+  border-radius: 2rem;
+  color: #362023;
+  font-size: medium;
+  outline: none;
+  font-weight: bold;
+  letter-spacing: 0.01rem;
+  z-index: 1;
+  font-family:"Andale Mono";
+  /* position: absolute;
+  right:.6rem; */
+ 
+}
+.formbutton:hover, .formbutton:focus {
+  /* color: white; */
+  background-color: white;
+}
+
+.formmessage input {
+  font-family:"Andale Mono";
+  appearance: none;
+  background-color: #f0b8ce;
+  border: 1px solid #f0b8ce;
+  line-height: 0;
+  font-size: 17px;
+  width: calc(200%+5rem);
+  padding: .6rem 3rem;
+  border-radius: 60px; 
+  color: #362023;
+  /* font-weight: 100; */
+  /* letter-spacing: 0.01rem; */
+  position: relative;
+  z-index: 1;
+}
+
+/* .formmessage input{
+  height:2.3rem;
+  width: 200%;
+  background:#f0b8ce;
+  border-radius: 2rem;
+  outline:none;
+  border:1px solid white;
+  color:white;
+  padding-left:10px;
+} */
+.formmessage input:focus {
+  outline: none;
+  background:white;
+  color: #362023;
+}
+
+::placeholder{
+  color:#362023;
+  font-size: small;
+  align-self: start;
+}
