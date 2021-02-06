@@ -2,12 +2,17 @@ import { useState } from 'react';
 import './App.css';
 import TextInput from './TextInput';
 import Message from './Message.js';
+import NamePicker from './NamePicker';
+
 function App() {
   const [messages,setMessages] = useState([])
   return <div className="App">
     <header className="header">
-      <div className="logo" />
+      <div className="logo"/>
       GB CHAT
+   
+        <NamePicker/>
+      
     </header>
     
    

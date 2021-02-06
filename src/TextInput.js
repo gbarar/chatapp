@@ -21,7 +21,7 @@ function TextInput(props) {
    return <div className="formmessage"> 
    <div class="form">
     <div class='formmessage input'>
-        <  input 
+        < input className="formmessage input"
             value={text}
             onChange={e=> setText(e.target.value)}
             onKeyPress={keyPressed}
