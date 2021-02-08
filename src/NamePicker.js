@@ -1,9 +1,18 @@
 import {useState} from 'react'
 
-function NamePicker(){
+function NamePicker(props){
     const [showInput, setShowInput] = useState(false)
-    const [username, setUsername] = useState('')
+    const [username, setUsername] = useState(
+        localStorage.getItem('username') || ''
+    )
 
+    
+    function save(){
+        props.saveName(username)
+        setShowInput(false)
+        localStorage.setItem('username',username)
+    }
+    
     function keyPressed(e){
         if(e.key==="Enter"){
             setShowInput(false)
@@ -16,7 +25,7 @@ function NamePicker(){
                 onChange={e=> setUsername(e.target.value)}
                 onKeyPress={keyPressed}
             />
-            <button className="ok-button" onClick={()=>setShowInput(false)}>
+            <button className="ok-button" onClick={save}>
                 OK
             </button>
         </div>

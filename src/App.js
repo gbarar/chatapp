@@ -6,26 +6,31 @@ import NamePicker from './NamePicker';
 
 function App() {
   const [messages,setMessages] = useState([])
+  const [username,setUsername] = useState(
+    localStorage.getItem('username') || ''
+  )
+  console.log(messages)
+  
   return <div className="App">
     <header className="header">
       <div className="logo"/>
       GB CHAT
    
-        <NamePicker/>
+      <NamePicker saveName={setUsername}/>
       
     </header>
     
    
 
   <div className="messages">
-  {messages.map((m,i)=> {
-   return <Message key={i} {...m} />
+  {messages.map((msg,i)=> {
+   return <Message key={i} {...msg} />
    })}
-    </div>
+  </div>
     
-    <TextInput 
-        send={(t)=> setMessages([{text:t},...messages])}
-    />
+  <TextInput 
+        send={(t)=> setMessages([{text:t,name:username, ts:new Date()}, ...messages])}
+  />
 
   </div>
  

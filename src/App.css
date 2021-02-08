@@ -36,7 +36,7 @@
 .username{
   font-size:20px;
   position: absolute;
-  right:5rem;
+  right:4.2rem;
   font-weight: bold;
 }
 
@@ -59,9 +59,9 @@
   background-color: #bd527f;
   border: none;
   line-height: 0;
-  font-size: 12px;
-  width: 40px;
-  padding: .6rem 3rem;
+  font-size: 14px;
+  width: 110px;
+  padding: .6rem 1rem;
   border-radius: 60px; 
   color: #362023;
   position: absolute;
@@ -134,7 +134,7 @@
 .message{
   background:#f0b8ce;
   color: #362023;
-  border-radius:10px;
+  border-radius:60px;
   margin:4px;
   display: inline-block;
   word-wrap: break-word; 
@@ -143,6 +143,15 @@
   padding: 4px 12px;
   text-align: justify ;
 
+}
+
+.message-name{
+  position:absolute;
+  top: -10px;
+  left: 7px;
+  font-size: .55rem;
+  color: #362023;
+  font-weight: bold;
 }
 
 .form {
